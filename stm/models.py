@@ -2,7 +2,7 @@ from stm import db
 
 
 def getProducts():
-    return Product.query.all()
+    return Product.query.order_by(Product.id).all()
 
 
 class Product(db.Model):
